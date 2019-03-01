@@ -7,10 +7,10 @@ class Pop extends Component {
     return(
       <div className="pop-container">
         <div className="pop_inner_container">
-          <div onClick={this.props.closePop} className="close-container">
+          <div onClick={this.props.submitPop} className="close-container">
           <p className="closeX">X</p>
           </div>
-
+          <h2 className="errorMsg">{this.props.errorMessage}</h2>
           <div className="input-container">
           <label>
             NAME:
@@ -40,7 +40,8 @@ class Pop extends Component {
           </div>
 
           <div className="button-box">
-            <button onClick={this.props.closePop}>submit</button>
+            <button onClick={this.props.submitPop}>submit</button>
+            <button onClick={this.props.clearPop}> clear</button>
           </div>
 
         </div>
